@@ -21,7 +21,7 @@ gulp.task 'connect:app', ->
     livereload: true
 
 gulp.task 'coffee', ->
-  gulp.src '**/*.coffee'
+  gulp.src 'src/**/*.coffee'
     .pipe coffeelint()
     .pipe coffeelint.reporter()
     .pipe coffee bare: true
@@ -30,5 +30,5 @@ gulp.task 'coffee', ->
     .pipe connect.reload()
 
 gulp.task 'watch', ['connect:app'], ->
-  gulp.watch '**/*.coffee', ['coffee']
+  gulp.watch 'src/**/*.coffee', ['coffee']
 
