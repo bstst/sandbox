@@ -17,7 +17,7 @@ gulp.task 'default', (cb) ->
 
 gulp.task 'connect:app', ->
   connect.server
-    port: 1337
+    # port: 1337
     livereload: true
 
 gulp.task 'coffee', ->
